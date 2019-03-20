@@ -17,7 +17,7 @@ public class TrackTester: MonoBehaviour
     private Vector3[] trackVertices;
     private Vector2Int[] trackEdges;
     private TrackSegment seg;
-    private string objFilePath = "Assets/Track/res/TestMesh.obj";
+    private string objFilePath = "Assets/TrackGenerator/Track/res/TestMesh.obj";
 
 	void Start () {
         ParseObj();
