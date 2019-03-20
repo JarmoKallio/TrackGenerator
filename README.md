@@ -1,3 +1,3 @@
 # TrackGenerator
 
-This is a simple c# project for generating tracks or in fact probably many other shapes that follow a curve. Right now you can add the script **TrackTester** (found in folder Track) to a 3D object in Unity and it will render shape of your choosing, stored in folder Track/res as TestMesh.obj, extruded and rotated. You should clone or download the files in your Unity Assets -folder, so that you have hte following structure: *Assets/TrackGenerator/Track..*.
+This is a simple C# project for generating tracks or in fact probably many other shapes that follow a curve. Right now you can add the script **TrackTester.cs** (found in folder Track) to a 3D object in Unity and it will render shape of your choosing, stored in folder Track/res as TestMesh.obj, extruded and rotated. You should clone or download the files in your Unity Assets -folder, so that you have hte following structure: *Assets/TrackGenerator/Track..*.
