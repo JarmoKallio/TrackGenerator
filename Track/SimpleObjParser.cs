@@ -6,6 +6,19 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
+/*
+
+Parses vertex and edge data from an Obj file. Uses Regex. Simply finds lines starting with
+letter "v" followed by three decimal numbers and returns those three as xyz coordinates of a
+vector. 
+
+The edges have only two values, more precisely, the indexes of start and end vertex of each
+edge. Now, it is good to know that the indexing starts at 1 not at 0. As with vertices, a 
+vector is generated, containing only two integer values this time. The lines containing edges
+are found by finding those lines that start with letter "l" and have two integer values.
+
+*/
+
 namespace TrackGenerator
 {
 
@@ -60,13 +73,14 @@ namespace TrackGenerator
         }
 
         private Vector2Int[] setFirstVertexIndexZero(Vector2Int[] edges){
-        //It seems Obj files start vertex indexing from 1 in its edges, so we have to subtract one from every value
+        //Obj files start vertex indexing from 1 in its edges, so we have to subtract one from every value
+            
             for(int i = 0; i<edges.Length;i++){
                 edges[i].x -=1;
                 edges[i].y -=1;
             }
         
-        return edges;
+            return edges;
         }
 
         private float Pfloat(string s){
